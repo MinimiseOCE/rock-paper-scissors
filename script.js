@@ -12,7 +12,9 @@ function getComputerChoice() {
 
 function getPlayerChoice() {
     while (true) {
-        let answer = window.prompt("Rock, Paper or Scissors?")
+        setTimeout(() => {
+        }, 1000);
+        let answer = prompt("Rock, Paper or Scissors?")
         if (answer == 'Rock') {
             return 1
         } else if (answer == 'Paper') {
@@ -75,10 +77,11 @@ function playGame() {
     }
 }
 
-while (true) {
+let playAgain = true;
+while (playAgain == true) {
     playGame()
-    let ans = window.prompt("Play Again? y/n")
+    let ans = prompt("Play Again? y/n")
     if (ans != 'y') {
-        playAgain = false;
+        playAgain = false
     }
 }
