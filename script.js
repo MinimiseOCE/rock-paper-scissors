@@ -10,10 +10,8 @@ function getComputerChoice() {
     }
 }
 
-console.log(getComputerChoice())
-
 function getPlayerChoice() {
-    while (4==4) {
+    while (true) {
         let answer = window.prompt("Rock, Paper or Scissors?")
         if (answer == 'Rock') {
             return 1
@@ -27,4 +25,60 @@ function getPlayerChoice() {
         }
 }
 
-console.log(getPlayerChoice())
+function playGame() {
+    console.log("Welcome to Rock Paper Scissors, first to three!")
+    let computerScore = 0;
+    let playerScore = 0;
+    let gameOver = false;
+    while (gameOver == false) {
+        console.log("The Score is " + playerScore + " - " + computerScore)
+        let a = getPlayerChoice()
+        let b = getComputerChoice()
+        if (a == 1) {
+            if (b == 1) {
+                console.log("You Tied")
+            } else if (b == 2) {
+                console.log("The Computer got a point.");
+                computerScore = (computerScore + 1);
+            } else {
+                console.log("You got a point!");
+                playerScore = (playerScore + 1);
+            }
+        } else if (a == 2) {
+            if (b == 2) {
+                console.log("You Tied")
+            } else if (b == 3) {
+                console.log("The Computer got a point.");
+                computerScore = (computerScore + 1);
+            } else {
+                console.log("You got a point!");
+                playerScore = (playerScore + 1);
+            }
+        } else if (a == 3) {
+            if (b == 3) {
+                console.log("You Tied")
+            } else if (b == 1) {
+                console.log("The Computer got a point.");
+                computerScore = (computerScore + 1);
+            } else {
+                console.log("You got a point!");
+                playerScore = (playerScore + 1);
+            }
+        }
+        if (computerScore == 3) {
+            console.log("You Lost.")
+            return
+        } else if (playerScore == 3) {
+            console.log("You Won!")
+            return
+        }
+    }
+}
+
+while (true) {
+    playGame()
+    let ans = window.prompt("Play Again? y/n")
+    if (ans != 'y') {
+        playAgain = false;
+    }
+}
