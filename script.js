@@ -77,11 +77,11 @@ function playGame() {
     }
 }
 
-let playAgain = true;
-while (playAgain == true) {
-    playGame()
-    let ans = prompt("Play Again? y/n")
-    if (ans != 'y') {
-        playAgain = false
-    }
-}
+// let playAgain = true;
+// while (playAgain == true) {
+//     playGame()
+//     let ans = prompt("Play Again? y/n")
+//     if (ans != 'y') {
+//         playAgain = false
+//     }
+// }
