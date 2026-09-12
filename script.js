@@ -44,13 +44,76 @@ let playerScore = 0
 let computerScore = 0
 
 document.getElementById("rockBtn").addEventListener("click", () => {
-  playRound(1);
+    let result = playRound(1)
+    if (result == 1) {
+        playerScore = (playerScore + 1)
+        if (playerScore == 3) {
+            document.getElementById("score").textContent = "You win! Go again!"
+            playerScore = 0
+            computerScore = 0
+        } else {
+            document.getElementById("score").textContent = "The Score is " + playerScore + "-" + computerScore + ".";
+        }
+    } else if (result == 2) {
+        computerScore = (computerScore + 1)
+        if (computerScore == 3) {
+            document.getElementById("score").textContent = "You lost! Go again!"
+            playerScore = 0
+            computerScore = 0
+        } else {
+            document.getElementById("score").textContent = "The Score is " + playerScore + "-" + computerScore + ".";
+        }
+    } else {
+        document.getElementById("score").textContent = "The Score is " + playerScore + "-" + computerScore + ".";
+    }
 });
 document.getElementById("paperBtn").addEventListener("click", () => {
-  playRound(2);
+    let result = playRound(2)
+    if (result == 1) {
+        playerScore = (playerScore + 1)
+        if (playerScore == 3) {
+            document.getElementById("score").textContent = "You win! Go again!"
+            playerScore = 0
+            computerScore = 0
+        } else {
+            document.getElementById("score").textContent = "The Score is " + playerScore + "-" + computerScore + ".";
+        }
+    } else if (result == 2) {
+        computerScore = (computerScore + 1)
+        if (computerScore == 3) {
+            document.getElementById("score").textContent = "You lost! Go again!"
+            playerScore = 0
+            computerScore = 0
+        } else {
+            document.getElementById("score").textContent = "The Score is " + playerScore + "-" + computerScore + ".";
+        }
+    } else {
+        document.getElementById("score").textContent = "The Score is " + playerScore + "-" + computerScore + ".";
+    }
 });
 document.getElementById("scissorsBtn").addEventListener("click", () => {
-  playRound(3);
+    let result = playRound(3)
+    if (result == 1) {
+        playerScore = (playerScore + 1)
+        if (playerScore == 3) {
+            document.getElementById("score").textContent = "You win! Go again!"
+            playerScore = 0
+            computerScore = 0
+        } else {
+            document.getElementById("score").textContent = "The Score is " + playerScore + "-" + computerScore + ".";
+        }
+    } else if (result == 2) {
+        computerScore = (computerScore + 1)
+        if (computerScore == 3) {
+            document.getElementById("score").textContent = "You lost! Go again!"
+            playerScore = 0
+            computerScore = 0
+        } else {
+            document.getElementById("score").textContent = "The Score is " + playerScore + "-" + computerScore + ".";
+        }
+    } else {
+        document.getElementById("score").textContent = "The Score is " + playerScore + "-" + computerScore + ".";
+    }
 });
 
 function playRound(playerChoice) {
